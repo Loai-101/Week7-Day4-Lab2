@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+
+  <h1>welcome to <%= RESTAURANT.name %></h1>
+  <% let name = RESTAURANT.name %> 
+  <% let address = RESTAURANT.address %>
+  <% let phone = RESTAURANT.phone %>
+  <% if(name === RESTAURANT.name){ %>
+    <p>Welcome to <%= name %> <br> At <%= address %> <br> And our phone is <%= phone %></p>
+  <% } else { %>
+    <p>Welcome to <%= name %> at <%= address %> and our phone is <%= phone %></p>
+  <% } %>
+  <% if(RESTAURANT.isOpen){ %>
+    <p>Yes we are open!</p>
+  <% } else { %>
+    <p>Sorry, we are closed.</p>
+  <% } %>
+ 
+</body>
+</html>
